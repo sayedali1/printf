@@ -7,7 +7,7 @@
 void _putInt(int num, int *pCount)
 {
 	/* if its negative num */
-	if (num < 0)0102
+	if (num < 0)
 	{
 		_putchar('-');
 		*pCount += 1;
