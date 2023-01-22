@@ -4,7 +4,7 @@
 /**
 *_printf - fun that do same as printf
 *@format: the string format
-*return: num of charchter printed
+*Return: num of charchter printed
 */
 int _printf(const char *format, ...)
 {
@@ -32,11 +32,6 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;/* get the chat after the % */
-			/* if (format[i] == '%')
-			{
-				_putchar('%');
-				i++;
-			} */
 			/* get which spcial char match the char we point to now */
 			j = spIndex(format[i], type);
 			/* printf("%d\n",j); */
