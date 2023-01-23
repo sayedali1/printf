@@ -41,10 +41,10 @@ int _printf(const char *format, ...)
 			{
 				_putchar('%');
 				_putchar(format[i]);
+				*pCount += 2;
 				/* i++; */
 			}
-		}
-		
+		}	
 	}
 	va_end(pa);
 	return (count);
