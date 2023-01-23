@@ -25,6 +25,8 @@ int print_rev(va_list pa, int *pCount)
 			_putchar(str[i]);
 			*pCount += 1;
 		}
+		str[i] ='\0';
+		_putchar(str[i]);
 	}
 	return (0);
 }
