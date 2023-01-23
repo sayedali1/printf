@@ -9,12 +9,12 @@
 int print_int(va_list pa, int *pCount)
 {
 
-	int num = va_arg(pa, int);
+	unsigned int  num = va_arg(pa, int);
 	int powten = 1, i, j, n , len = 0, digit;
 
 	if (num != 0)
 	{
-		if (num < 0)
+		if ((int)num < 0)
 		{
 			_putchar('-');
 			*pCount += 1;
