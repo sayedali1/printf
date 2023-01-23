@@ -26,5 +26,5 @@ int print_rev(va_list pa, int *pCount)
 			*pCount += 1;
 		}
 	}
-	return (1);
+	return (0);
 }
