@@ -1,6 +1,12 @@
 #include "main.h"
 #include <stdio.h>
-
+/**
+*call_sp - fun that get the fun and call it
+*@ch: char we want to check
+*@p: pointer to out struct
+*@pCount: pointer to our counter
+*@pa:pointer to our arguments
+*/
 
 void call_sp(char ch, struct sp_char *p, int *pCount, va_list pa)
 {
