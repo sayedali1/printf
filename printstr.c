@@ -10,8 +10,8 @@ int print_str(va_list pa, int *pCount)
 	char *str;
 
 	str = va_arg(pa, char *);
-	if (str == NULL)
-		return (-1);
+	/* if (str == NULL)
+		return (-1); */
 	if (_putstr(str, _strlen(str)) != -1)
 		*pCount += _strlen(str);
 	else
@@ -24,7 +24,7 @@ int print_str(va_list pa, int *pCount)
 *print_ch - fun that print char
 *@pa: points to the list of arguments
 *@pCount: pointer to counter
-*Retutn: 1 if sucess , -1 otherwise
+*Return: 1 if sucess , -1 otherwise
 */
 int print_ch(va_list pa, int *pCount)
 {
@@ -32,6 +32,6 @@ int print_ch(va_list pa, int *pCount)
 		*pCount += 1;
 	else
 		return (-1);
-	
+
 	return (1);
 }

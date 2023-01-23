@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	spChar type[] = {
 		{'s', print_str}, {'c', print_ch},
 		/* {'d', print_int}, {'i', print_int}, */
-		/* {'b', print_bi}, */ {'\0', NULL}
+		{'\0', NULL}
 	};
 
 	if (format == NULL)
