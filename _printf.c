@@ -18,11 +18,11 @@ int _printf(const char *format, ...)
 		{'\0', NULL}
 	};
 
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && format[i] == '/0'))
 		return (-1);
 
 	va_start(pa, format);
-	for (i = 0; (format[i] != '\0'); i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
 		{
