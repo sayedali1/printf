@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 	int *pCount = &count;
 	spChar type[] = {
 		{'s', print_str}, {'c', print_ch},
-		/* {'d', print_int}, {'i', print_int}, */
+		{'d', print_int}, {'i', print_int},
 		{'\0', NULL}};
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))

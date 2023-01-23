@@ -5,9 +5,11 @@
 *@pa: points to the list of arguments
 *@pCount: pointer to counter
 */
-void print_int(va_list pa, int *pCount)
+int print_int(va_list pa, int *pCount)
 {
 	int num = va_arg(pa, int);
 
 	_putInt(num, pCount);
+
+	return (0);
 }
