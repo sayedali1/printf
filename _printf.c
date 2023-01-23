@@ -31,14 +31,8 @@ int _printf(const char *format, ...)
 	int *pCount = &count;
 	spChar type[] = {
 		{'s', print_str}, {'c', print_ch}, {'d', print_int},
-<<<<<<< HEAD
-		{'i', print_int}, { 'b',print_bi},
+		{'i', print_int}, { 'b',print_bi}, {'r', print_rev},
 		{'u', print_unsigned}, {'\0', NULL}};
-=======
-		{'i', print_int}, {'b',print_bi},
-		{'r', print_rev},
-		{'\0', NULL}};
->>>>>>> a8b2ce7ca1fdd4a4e1296bd56af2b5ef844e4c78
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
