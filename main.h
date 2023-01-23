@@ -13,7 +13,7 @@
 typedef struct sp_char
 {
     char ch;
-    void (*fun)(va_list, int *);
+    int (*fun)(va_list, int *);
 }spChar;
 
 int _strlen(char *s);
@@ -28,13 +28,13 @@ int _putstr(char *str, int len);
 
 void _putInt(int num, int *pCount);
 
-void print_str(va_list pa, int *pCount);
+int print_str(va_list pa, int *pCount);
 
-void print_ch(va_list pa, int *pCount);
+int print_ch(va_list pa, int *pCount);
 
-void print_int(va_list pa, int *pCount);
+/* void print_int(va_list pa, int *pCount); */
 
-void print_bi(va_list pa, int *pCount);
+/* void print_bi(va_list pa, int *pCount); */
 
 
 #endif

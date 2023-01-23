@@ -3,23 +3,35 @@
 *print_str - fun that print str
 *@pa: points to the list of arguments
 *@pCount: pointer to counter
+*Return: 1 if no error , -1 otherwise
 */
-void print_str(va_list pa, int *pCount)
+int print_str(va_list pa, int *pCount)
 {
 	char *str;
 
 	str = va_arg(pa, char *);
-	_putstr(str, _strlen(str));
-	*pCount += _strlen(str);
+	if (str == NULL)
+		return (-1);
+	if (_putstr(str, _strlen(str)) != -1)
+		*pCount += _strlen(str);
+	else
+		return (-1);
+
+	return (1);
 }
 
 /**
 *print_ch - fun that print char
 *@pa: points to the list of arguments
 *@pCount: pointer to counter
+*Retutn: 1 if sucess , -1 otherwise
 */
-void print_ch(va_list pa, int *pCount)
+int print_ch(va_list pa, int *pCount)
 {
-	_putchar(va_arg(pa, int));
-	*pCount += 1;
+	if (_putchar(va_arg(pa, int)) != -1)
+		*pCount += 1;
+	else
+		return (-1);
+	
+	return (1);
 }

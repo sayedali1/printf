@@ -12,17 +12,17 @@ int _printf(const char *format, ...)
 	int i, j = 0;
 	int count = 0;
 	int *pCount = &count;
-	/* contain all special char */
 	spChar type[] = {
 		{'s', print_str}, {'c', print_ch},
-		{'d', print_int}, {'i', print_int},
-		{'b', print_bi}, {'\0', NULL}
+		/* {'d', print_int}, {'i', print_int}, */
+		/* {'b', print_bi}, */ {'\0', NULL}
 	};
 
-	/* pCount = &count; */
-	va_start(pa, format);
+	if (format == NULL)
+		return (-1);
 
-	for (i = 0; (format != NULL && format[i] != '\0'); i++)
+	va_start(pa, format);
+	for (i = 0; (format[i] != '\0'); i++)
 	{
 		if (format[i] != '%')
 		{
@@ -42,7 +42,6 @@ int _printf(const char *format, ...)
 				_putchar('%');
 				_putchar(format[i]);
 				*pCount += 2;
-				/* i++; */
 			}
 		}
 	}
