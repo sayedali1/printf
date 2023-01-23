@@ -36,6 +36,8 @@ int print_int(va_list pa, int *pCount);
 
 int print_bi(va_list pa, int *pCount);
 
+int print_rev(va_list pa, int *pCount);
+
 int print_unsigned(va_list pa, int *pCount);
 
 #endif

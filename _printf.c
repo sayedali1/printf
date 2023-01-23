@@ -9,9 +9,7 @@
 */
 void call_sp(char ch, struct sp_char *p, int *pCount, va_list pa)
 {
-
 	int j = spIndex(ch, p);
-
 	if (j != -1) /* make sure it match */
 		p[j].fun(pa, pCount); /*print the argument  */
 	else
@@ -33,8 +31,14 @@ int _printf(const char *format, ...)
 	int *pCount = &count;
 	spChar type[] = {
 		{'s', print_str}, {'c', print_ch}, {'d', print_int},
+<<<<<<< HEAD
 		{'i', print_int}, { 'b',print_bi},
 		{'u', print_unsigned}, {'\0', NULL}};
+=======
+		{'i', print_int}, {'b',print_bi},
+		{'r', print_rev},
+		{'\0', NULL}};
+>>>>>>> a8b2ce7ca1fdd4a4e1296bd56af2b5ef844e4c78
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
