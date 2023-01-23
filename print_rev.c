@@ -20,13 +20,13 @@ int print_rev(va_list pa, int *pCount)
 	}
 	else
 	{	
-		for (i = _strlen(str); i > 0; i--)
+		for (i = _strlen(str) - 1; i >= 0; i--)
 		{
 			_putchar(str[i]);
 			*pCount += 1;
 		}
-		str[i] ='\0';
-		_putchar(str[i]);
+		
+
 	}
 	return (0);
 }
