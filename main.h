@@ -34,7 +34,7 @@ int print_ch(va_list pa, int *pCount);
 
 int print_int(va_list pa, int *pCount);
 
-/* void print_bi(va_list pa, int *pCount); */
+int print_bi(va_list pa, int *pCount);
 
 
 #endif
