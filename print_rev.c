@@ -8,31 +8,17 @@
 */
 int print_rev(va_list pa, int *pCount)
 {
-	int i, j;
+	int i;
 	char *str = va_arg(pa, char *);
-	char *rev;
 
 	if (str == NULL)
 	{
 		str = "(null)";
 	}
-
-	rev = malloc(sizeof(char *) * (_strlen(str)));
-	if (rev == NULL)
+	for (i = _strlen(str); i > 0; i--)
 	{
-		free(rev);
-		return (-1);
+		_putchar(str[i]);
+		*pCount += 1;
 	}
-
-	j = 0;
-	for (i = _strlen(str) - 1; i >= 0; i--)
-	{
-		rev[j] = str[i];
-		j++;
-	}
-	_putstr(rev, _strlen(rev));
-	pCount += _strlen(rev);
-
-	free(rev);
 	return (1);
 }
