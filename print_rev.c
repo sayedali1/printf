@@ -13,9 +13,10 @@ int print_rev(va_list pa, int *pCount)
 
 	if (str == NULL)
 	{
-		str = "(null)";
+		/* str = "(null)";
 		_putstr(str, _strlen(str));
-		*pCount += _strlen(str);
+		*pCount += _strlen(str); */
+		return (-1);
 	}
 	else
 	{	
