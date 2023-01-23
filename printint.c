@@ -8,44 +8,40 @@
 */
 int print_int(va_list pa, int *pCount)
 {
-	int num = va_arg(pa, int);
-	int powten = 1, i, j, n , len = 0, digit;
+	int n = va_arg(pa, int);
+	int num, last = n % 10, digit, exp = 1;
 
-	if (num != 0)
-	{
-		if (num < 0)
-		{
-			_putchar('-');
-			*pCount += 1;
-			num *= -1;
-		}
-		n = num;
-		while (n != 0)
-		{
-			n /= 10;
-			len++;
-		}
-		for (i = 1; i <= len - 1; i++)
-		{
-			powten *= 10;
-		}
+	n = n / 10;
+	num = n;
 
-		for (j = 1; j <= i; j++)
-		{
-			digit = num / powten;
-			_putchar(digit + '0');
-			*pCount += 1;
-			num -= digit * powten;
-			powten /= 10;
-		}
-		/* _putInt(num, pCount); */
-	}
-	else
+	if (last < 0)
 	{
-		_putchar('0');
+		_putchar('-');
+		num = -num;
+		n = -n;
+		last = -last;
 		*pCount += 1;
-		return (1);
 	}
+	if (num > 0)
+	{
+		while (num / 10 != 0)
+		{
+			exp = exp * 10;
+			num = num / 10;
+		}
+		num = n;
+		while (exp > 0)
+		{
+			digit = num / exp;
+			_putchar(digit + '0');
+			num = num - (digit * exp);
+			exp = exp / 10;
+			*pCount +=1;
+		}
+	}
+	_putchar(last + '0');
+
+	/* _putInt(num, pCount); */
 
 	return (0);
 }
