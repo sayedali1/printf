@@ -7,7 +7,6 @@
 *@pCount: pointer to our counter
 *@pa:pointer to our arguments
 */
-
 void call_sp(char ch, struct sp_char *p, int *pCount, va_list pa)
 {
 
@@ -35,7 +34,7 @@ int _printf(const char *format, ...)
 	spChar type[] = {
 		{'s', print_str}, {'c', print_ch}, {'d', print_int},
 		{'i', print_int}, { 'b',print_bi},
-		{'\0', NULL}};
+		{'u', print_unsigned}, {'\0', NULL}};
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
