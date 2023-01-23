@@ -3,7 +3,6 @@
 
 #include <stdarg.h> /* for varidic funs */
 #include <unistd.h>/* for write fun  */
-#include <stdio.h>
 #include <stdlib.h>
 /**
 *struct sp_chat - sturct for the special character

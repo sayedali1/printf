@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
 *call_sp - fun that get the fun and call it
 *@ch: char we want to check
