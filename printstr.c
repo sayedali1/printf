@@ -10,8 +10,9 @@ int print_str(va_list pa, int *pCount)
 	char *str;
 
 	str = va_arg(pa, char *);
-	/* if (str == NULL)
-		return (-1); */
+	if (str == NULL)
+		str = "(null)";
+
 	if (_putstr(str, _strlen(str)) != -1)
 		*pCount += _strlen(str);
 	else
@@ -28,7 +29,7 @@ int print_str(va_list pa, int *pCount)
 */
 int print_ch(va_list pa, int *pCount)
 {
-	if (_putchar(va_arg(pa, int)) != -1)
+	if (_putchar((unsigned char)va_arg(pa, int)) != -1)
 		*pCount += 1;
 	else
 		return (-1);

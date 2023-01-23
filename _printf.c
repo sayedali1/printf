@@ -29,7 +29,8 @@ int _printf(const char *format, ...)
 			_putchar(format[i]); /* print the char */
 			*pCount += 1;
 		}
-		else if (format[i] == '%' && format[i + 1] != '%')
+		
+		if (format[i] == '%' && format[i + 1] != '%')
 		{
 			i++;/* get the chat after the % */
 			/* get which spcial char match the char we point to now */
