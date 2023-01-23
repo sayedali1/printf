@@ -8,9 +8,8 @@
 */
 int print_int(va_list pa, int *pCount)
 {
-
 	unsigned int  num = va_arg(pa, int);
-	
+
 	_putInt(num, pCount);
 
 	return (0);

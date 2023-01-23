@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*spIndex - fun that the index of the special char from the 
+*spIndex - fun that the index of the special char from the
 *array of str
 *@ch: char we want to know its index
 *@p: pointer to array of struct that we search in

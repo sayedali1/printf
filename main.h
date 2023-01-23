@@ -5,16 +5,15 @@
 #include <unistd.h>/* for write fun  */
 #include <stdlib.h>
 /**
-*struct sp_chat - sturct for the special character
+* struct sp_char - sturct for the special character
 *@ch: symbole of the speacial character
 *@fun: pointer to fun to print the argurment
 */
 typedef struct sp_char
 {
-    char ch;
-    int (*fun)(va_list, int *);
-}spChar;
-
+char ch;
+int (*fun)(va_list, int *);
+} spChar;
 int _strlen(char *s);
 
 int _printf(const char *format, ...);
