@@ -10,13 +10,15 @@ int print_bi(va_list pa, int *pCount)
 {
 	unsigned int num = va_arg(pa, int);
 	/* allocate memory to store the binary num */
-	unsigned int *arr = malloc(sizeof(unsigned int));
+	int *arr = malloc(sizeof(int));
 	int i = 0;
 
-	/**
-	*if (arr == NULL)
-		*return (-1);
-		*/
+	
+	if (arr == NULL)
+	{
+		free(arr);
+		return (-1);
+	}	
 
 	if (num == 0)/* if num is zero */
 	{
