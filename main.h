@@ -38,4 +38,10 @@ int print_rev(va_list pa, int *pCount);
 
 int print_unsigned(va_list pa, int *pCount);
 
+int print_octal(va_list pa, int *pCount);
+
+int print_lowerhex(va_list pa, int *pCount);
+
+int print_upperhex(va_list pa, int *pCount);
+
 #endif

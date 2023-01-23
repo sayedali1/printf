@@ -32,7 +32,9 @@ int _printf(const char *format, ...)
 	spChar type[] = {
 		{'s', print_str}, {'c', print_ch}, {'d', print_int},
 		{'i', print_int}, {'b', print_bi}, {'r', print_rev},
-		{'u', print_unsigned}, {'\0', NULL}};
+		{'u', print_unsigned}, {'o', print_octal},
+		{'x', print_lowerhex}, {'X', print_upperhex},
+		{'\0', NULL}};
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
