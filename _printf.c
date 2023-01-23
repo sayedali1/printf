@@ -29,8 +29,8 @@ int _printf(const char *format, ...)
 			_putchar(format[i]); /* print the char */
 			*pCount += 1;
 		}
-
-		if (format[i] == '%')
+		
+		if (format[i] == '%' && format[i + 1] != '%')
 		{
 			i++;/* get the chat after the % */
 			/* get which spcial char match the char we point to now */
@@ -40,8 +40,9 @@ int _printf(const char *format, ...)
 				type[j].fun(pa, pCount); /*print the argument  */
 			else
 			{
+				_putchar('%');
 				_putchar(format[i]);
-				*pCount += 1;
+				*pCount += 2;
 			}
 		}
 	}
