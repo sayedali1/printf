@@ -9,7 +9,7 @@
 int print_int(va_list pa, int *pCount)
 {
 	int num = va_arg(pa, int);
-	int powten = 1, i, j, n;
+	int powten = 1, i, j, n , len = 0, digit;
 
 	if (num != 0)
 	{
@@ -20,16 +20,22 @@ int print_int(va_list pa, int *pCount)
 			num *= -1;
 		}
 		n = num;
-		for (i = 0; n /= 10; i++)
+		while (n != 0)
+		{
+			n /= 10;
+			len++;
+		}
+		for (i = 1; i <= len - 1; i++)
 		{
 			powten *= 10;
 		}
 
-		for (j = 0; j <= i; j++)
+		for (j = 1; j <= i; j++)
 		{
-			_putchar((num / powten) + '0');
+			digit = num / powten;
+			_putchar(digit + '0');
 			*pCount += 1;
-			num %= powten;
+			num -= digit * powten;
 			powten /= 10;
 		}
 		/* _putInt(num, pCount); */
