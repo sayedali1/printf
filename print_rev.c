@@ -14,11 +14,16 @@ int print_rev(va_list pa, int *pCount)
 	if (str == NULL)
 	{
 		str = "(null)";
+		_putstr(str, _strlen(str));
+		*pCount += _strlen(str);
 	}
-	for (i = _strlen(str); i > 0; i--)
-	{
-		_putchar(str[i]);
-		*pCount += 1;
+	else
+	{	
+		for (i = _strlen(str); i > 0; i--)
+		{
+			_putchar(str[i]);
+			*pCount += 1;
+		}
 	}
 	return (1);
 }
