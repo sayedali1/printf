@@ -13,8 +13,10 @@ int print_bi(va_list pa, int *pCount)
 	unsigned int *arr = malloc(sizeof(unsigned int));
 	int i = 0;
 
-	if (arr == NULL)
-		return (-1);
+	/**
+	*if (arr == NULL)
+		*return (-1);
+		*/
 
 	if (num == 0)/* if num is zero */
 	{
@@ -31,6 +33,6 @@ int print_bi(va_list pa, int *pCount)
 	{
 		_putInt(arr[i--], pCount); /* print the binary backword */
 	}
-	free (arr);
+	free(arr);
 	return (0);
 }
