@@ -26,7 +26,7 @@ int _putchar(char sp_ch);
 
 int _putstr(char *str, int len);
 
-void _putInt(unsigned int num, int *pCount);
+void _putInt(int num, int *pCount);
 
 int print_str(va_list pa, int *pCount);
 

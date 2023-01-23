@@ -4,11 +4,11 @@
 *@num: the integer we want to print
 *@pCount:pointer to the counter to know num of int being printed
 */
-void _putInt(unsigned int num, int *pCount)
+void _putInt(int num, int *pCount)
 {
 	/* if its negative num */
 	
-	if ((int)num < 0)
+	if (num < 0)
 	{
 		_putchar('-');
 		*pCount += 1;
