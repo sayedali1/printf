@@ -22,9 +22,9 @@ int _printf(const char *format, ...);
 
 int spIndex(char ch, struct sp_char *p);
 
-void _putchar(char sp_ch);
+int _putchar(char sp_ch);
 
-void _putstr(char *str, int len);
+int _putstr(char *str, int len);
 
 void _putInt(int num, int *pCount);
 

@@ -6,7 +6,7 @@
 */
 void print_str(va_list pa, int *pCount)
 {
-	char *str; 
+	char *str;
 
 	str = va_arg(pa, char *);
 	_putstr(str, _strlen(str));

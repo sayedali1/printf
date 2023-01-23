@@ -44,7 +44,7 @@ int _printf(const char *format, ...)
 				*pCount += 2;
 				/* i++; */
 			}
-		}	
+		}
 	}
 	va_end(pa);
 	return (count);
