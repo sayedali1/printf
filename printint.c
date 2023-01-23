@@ -37,6 +37,7 @@ int print_int(va_list pa, int *pCount)
 	else
 	{
 		_putchar('0');
+		*pCount += 1;
 		return (1);
 	}
 
