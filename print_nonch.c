@@ -6,7 +6,7 @@
 *@pCount: counter
 *Return: 1 if no num , 0 otherwise
 */
-int put_hex_upper(unsigned int num, int *pCount)
+int put_hex_upper(int num, int *pCount)
 {
 	char buffer[32];
 	int i;
@@ -54,7 +54,7 @@ int print_nonch(va_list pa, int *pCount)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] < 32  || str[i] >= 127)
+		if ((str[i] > 0 && str[i] < 32) || str[i] >= 127)
 		{
 			_putchar('\\');
 			_putchar('x');

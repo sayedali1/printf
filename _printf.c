@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 	spChar type[] = {
 		{'s', print_str}, {'c', print_ch}, {'d', print_int},
 		{'i', print_int}, {'b', print_bi}, {'r', print_rev},
-		{'u', print_unsigned}, {'o', print_octal},
+		{'u', print_unsigned}, {'o', print_octal}, {'S', print_nonch},
 		{'x', print_lowerhex}, {'X', print_upperhex},
 		{'\0', NULL}};
 

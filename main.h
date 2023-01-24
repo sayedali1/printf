@@ -4,6 +4,7 @@
 #include <stdarg.h> /* for varidic funs */
 #include <unistd.h>/* for write fun  */
 #include <stdlib.h>
+#include <stdio.h>
 /**
 * struct sp_char - sturct for the special character
 *@ch: symbole of the speacial character
@@ -43,5 +44,7 @@ int print_octal(va_list pa, int *pCount);
 int print_lowerhex(va_list pa, int *pCount);
 
 int print_upperhex(va_list pa, int *pCount);
+
+int print_nonch(va_list pa, int *pCount);
 
 #endif
