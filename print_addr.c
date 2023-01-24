@@ -7,7 +7,7 @@
  * @pCount: Pointer to counter
  * Return:0
  */
-int print_hex(long int num, int *pCount)
+int print_hex(unsigned long int num, int *pCount)
 {
 	char buffer[32];
 	int i;
