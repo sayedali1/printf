@@ -5,4 +5,4 @@
 * In this project, we demonstrated our team working skills, along with extensive research and curiosity.
 * We used the man pages as a refrence on how our printf should work 
 * This influenced the design of our code
-* Project contains several files for 
+* Project contains several files for different 
