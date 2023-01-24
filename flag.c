@@ -8,11 +8,11 @@
 */
 void postive_sign(char ch, int j, va_list ap, int *pCount)
 {
-	/* printf("%c\n", ch); */
+
 
 	if (ch == '+' && (j == 2 || j == 3))
 	{
-		if (va_arg(ap, int) > 0)
+		if (va_arg(ap, int) >= 0)
 		{
 			_putchar('+');
 			*pCount += 1;
@@ -30,7 +30,7 @@ void space_sign(char ch, int j, va_list ap, int *pCount)
 {
 	if (ch == ' ' && (j == 2 || j == 3))
 	{
-		if (va_arg(ap, int) > 0)
+		if (va_arg(ap, int) >= 0)
 		{
 			_putchar(' ');
 			*pCount += 1;
