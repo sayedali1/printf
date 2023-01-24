@@ -9,4 +9,4 @@
 * Functions are organized and called through a struct array 
 * Each function corresponds to a different character 
 * Characters are the specifiers of each function 
-* Variadic functions are implemented to help contain any number of arguments 
+* Variadic functions are implemented to help contain any number of arguments sent as strings 
