@@ -7,4 +7,4 @@
 * This influenced the design of our code
 * Project contains several files for different functions
 * Functions are organized and called through a struct array 
-* Each function corresponds to a different 
+* Each function corresponds to a different character 
