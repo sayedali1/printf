@@ -8,4 +8,4 @@
 * Project contains several files for different functions
 * Functions are organized and called through a struct array 
 * Each function corresponds to a different character 
-* Characters 
+* Characters are 
