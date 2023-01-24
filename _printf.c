@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 		{'i', print_int}, {'b', print_bi}, {'r', print_rev},
 		{'u', print_unsigned}, {'o', print_octal}, {'S', print_nonch},
 		{'x', print_lowerhex}, {'X', print_upperhex}, {'R', print_rot13},
-		{'\0', NULL}};
+		{'p', print_addr}, {'\0', NULL}};
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
