@@ -21,7 +21,12 @@ int print_rot13(va_list pa, int *pCount)
 		'J', 'K', 'L', 'M'};
 
 	if (str == NULL)
+	{
 		str = "(null)";
+		_putstr(str, _strlen(str));
+		*pCount += _strlen(str);
+		return (-1);
+	}
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
