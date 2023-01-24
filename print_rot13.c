@@ -40,6 +40,11 @@ int print_rot13(va_list pa, int *pCount)
 			_putchar(b[j]);
 			*pCount += 1;
 		}
+		else
+		{
+			_putchar(str[i]);
+			*pCount += 1;
+		}
 	}
 
 	return (0);
