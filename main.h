@@ -47,4 +47,6 @@ int print_upperhex(va_list pa, int *pCount);
 
 int print_nonch(va_list pa, int *pCount);
 
+int print_rot13(va_list pa, int *pCount);
+
 #endif
