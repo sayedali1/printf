@@ -1,24 +1,53 @@
 #include "main.h"
 /**
-*call_sp - fun that get the fun and call it
-*@ch: char we want to check
+*call_sp - fun that get the fun and call it and check
+*for signs
+*@format: the str format
+*@i: pointer to the index of our format
 *@p: pointer to out struct
 *@pCount: pointer to our counter
 *@pa:pointer to our arguments
 */
-void call_sp(char ch, struct sp_char *p, int *pCount, va_list pa)
+void call_sp(const char *format, int *i, struct sp_char *p,
+int *pCount, va_list pa)
 {
-	int j = spIndex(ch, p);
+	int j, k;
+	va_list ap; /* to copy the pa */
+	int index = *i;
+	sign flag[] = {{'+', postive_sign}, {' ', space_sign}, {'#', window_sign},
+		{'\0', NULL}};
+
+	va_copy(ap, pa); /* copy the list of the arguments */
+
+	for (k = 0; flag[k].ch != '\0'; k++)/* if there are flags */
+	{
+
+		if (format[index] == flag[k].ch)
+		{
+			index++;
+			break;
+		}
+
+	}
+	j = spIndex(format[index], p);/* get the index of the sp */
 
 	if (j != -1) /* make sure it match */
+	{
+		if (flag[k].ch != '\0')
+			flag[k].fun(flag[k].ch, j, ap, pCount);/* print flag */
 		p[j].fun(pa, pCount); /*print the argument  */
+		*i = index;
+	}
 	else
 	{
 		_putchar('%');
-		_putchar(ch);
-		*pCount += 2;
+		(*i)--;
+		*pCount += 1;
+		return;
 	}
 }
+
+
 /**
 *_printf - fun that do same as printf
 *@format: the string format
@@ -49,8 +78,9 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && format[i + 1] != '%')
 		{
-			i++;/* get the chat after the % */
-			call_sp(format[i], type, pCount, pa);
+			i++;/* get the char after the % */
+			call_sp(format, &i, type, pCount, pa);
+
 		}
 		else if (format[i] == '%' && format[i + 1] == '%')
 		{
