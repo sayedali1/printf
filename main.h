@@ -17,7 +17,7 @@ typedef struct sp_char
 } spChar;
 
 /**
-* struct sp_char - sturct for the special character
+*struct signs - sturct for the special character
 *@ch: symbole of the signs
 *@fun: pointer to fun to print sign
 */

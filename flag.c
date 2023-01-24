@@ -47,21 +47,24 @@ void space_sign(char ch, int j, va_list ap, int *pCount)
 void window_sign(char ch, int j, __attribute__((unused))va_list ap,
 int *pCount)
 {
-	if (ch == '#' && j == 7)
+	if (va_arg(ap, int) != 0)
 	{
-		_putchar('0');
-		*pCount += 1;
-	}
-	else if (ch == '#' && j == 9)
-	{
-		_putchar('0');
-		_putchar('x');
-		*pCount += 2;
-	}
-	else if (ch == '#' && j == 10)
-	{
-		_putchar('0');
-		_putchar('X');
-		*pCount += 2;
+		if (ch == '#' && j == 7)
+		{
+			_putchar('0');
+			*pCount += 1;
+		}
+		else if (ch == '#' && j == 9)
+		{
+			_putchar('0');
+			_putchar('x');
+			*pCount += 2;
+		}
+		else if (ch == '#' && j == 10)
+		{
+			_putchar('0');
+			_putchar('X');
+			*pCount += 2;
+		}
 	}
 }
