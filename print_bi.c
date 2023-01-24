@@ -6,33 +6,32 @@
 *@pCount: pointer to counter
 *Return: 0
 */
-int print_bi(va_list pa, int *pCount)
+int print_bi(va_list pa, __attribute__((unused))int *pCount)
 {
-unsigned int num = va_arg(pa, int);
-/* allocate memory to store the binary num */
-int *arr = malloc(sizeof(int));
-int i = 0;
+	unsigned int num = va_arg(pa, unsigned int);
+	char buffer[32];
+	int i;
 
-if (arr == NULL)
-{
-free(arr);
-return (-1);
-}
-if (num == 0)/* if num is zero */
-{
-_putInt(0, pCount);
-}
-while (num != 0)
-{
-/* add the binary num forward */
-arr[i++] = num % 2;
-num /= 2;
-}
-i--;
-while (i >= 0)
-{
-_putInt(arr[i--], pCount); /* print the binary backword */
-}
-free(arr);
-return (0);
+	i = 0;
+	if (num == 0)
+	{
+		_putchar('0');
+		(*pCount)++;
+		return (1);
+	}
+	/* devide on base 2 */
+	for (i = 0; num > 0; i++)
+	{
+		buffer[i] = (num % 2) + '0';
+		num /= 2;
+	}
+
+	i--;
+	/* print it in backword */
+	for (; i >= 0; i--)
+	{
+		_putchar(buffer[i]);
+		(*pCount)++;
+	}
+	return (0);
 }
