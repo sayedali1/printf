@@ -7,3 +7,4 @@
 * This influenced the design of our code
 * Project contains several files for different functions
 * Functions are organized and called through a struct array 
+* 
