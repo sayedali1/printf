@@ -10,3 +10,7 @@
 * Each function corresponds to a different character 
 * Characters are the specifiers of each function 
 * Variadic functions are implemented to help contain any number of arguments sent as strings 
+
+## _printf
+* Driver file calling all functions through a struct array and specifier character 
+
