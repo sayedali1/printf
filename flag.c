@@ -13,7 +13,7 @@ void postive_sign(int flag, char ch, int j, va_list ap, int *pCount)
 	{
 		if (ch == '+' && (j == 2 || j == 3 || j == 12))
 		{
-			if (va_arg(ap, int) >= 0)
+			if (va_arg(ap, int) >= 0 || j == 12)
 			{
 				_putchar('+');
 				*pCount += 1;
@@ -37,7 +37,7 @@ void space_sign(int flag, char ch, int j, va_list ap, int *pCount)
 {
 	if ((ch == ' ' && (j == 2 || j == 3 || j == 12)) && flag == 0)
 	{
-		if (va_arg(ap, int) >= 0)
+		if (va_arg(ap, int) >= 0 || j == 12)
 		{
 			_putchar(' ');
 			*pCount += 1;
@@ -66,7 +66,7 @@ void window_sign(int flag, char ch, int j, va_list ap, int *pCount)
 {
 	if (va_arg(ap, int) != 0)
 	{
-		if (flag > 1 && !(j == 2 || j == 3))
+		if (flag > 1 && !(j == 2 || j == 3 || j == 12))
 		{
 			if (ch == '#' && j == 7)
 			{
