@@ -176,7 +176,7 @@ Output:
 0x561a6d7bab5d
 ```
 
-#### [%]([printf/_printf.c at main · sayedali1/printf (github.com)](https://github.com/sayedali1/printf/blob/main/_printf.c))
+#### [%](https://github.com/sayedali1/printf/blob/main/_printf.c)
 The `%` conversion specifier is used to write out the character `%`. No argument is transformed, and the complete conversion specification is `%%`. This conversion specifier is useful in situations where the `%` character needs to be included in the output, but not as a conversion specifier.
 
 Example:
@@ -198,7 +198,7 @@ Output:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE]([printf/LICENSE at main · sayedali1/printf (github.com)](https://github.com/sayedali1/printf/blob/main/LICENSE)) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/sayedali1/printf/blob/main/LICENSE) file for details.
 
 ## Acknowledgements :pray:
 
@@ -208,4 +208,4 @@ function `printf`. This README borrows from the Linux man page
 
 This program was written as part of the curriculum for ALX Software Engineering Programme.
 
-The ALX Software Engineering Programme is a fully-funded scholarship programme. As part of the African Leadership Group, their mission is to transform the future of Africa by creating 2M job opportunities by 2030 for young African talent. For more information, visit [this link]([ALX (alxafrica.com)](https://www.alxafrica.com/)).
+The ALX Software Engineering Programme is a fully-funded scholarship programme. As part of the African Leadership Group, their mission is to transform the future of Africa by creating 2M job opportunities by 2030 for young African talent. For more information, visit [this link](https://www.alxafrica.com/).
