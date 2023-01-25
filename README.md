@@ -54,7 +54,7 @@ The `format` string argument is a fixed sequence of characters that may include 
 
 The conversion specifier, which begins with the character `%`, is a character that determines the type of conversion to be executed. The `_printf` function can handle the following types of conversion specifiers:
 
-#### [d, i](https://github.com/sayedali1/printf/blob/main/_putint.c))
+#### [d, i](https://github.com/sayedali1/printf/blob/main/_putint.c)
 The `int` argument is transformed into a signed decimal or integer representation.
 
 Example `main.c`:
