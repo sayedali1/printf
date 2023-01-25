@@ -9,11 +9,11 @@
 */
 void postive_sign(int flag, char ch, int j, va_list ap, int *pCount)
 {
-	if (flag < 2 || (j == 2 || j == 3))
+	if (flag < 2 || (j == 2 || j == 3 || j == 12))
 	{
-		if (ch == '+' && (j == 2 || j == 3))
+		if (ch == '+' && (j == 2 || j == 3 || j == 12))
 		{
-			if (va_arg(ap, int) >= 0)
+			if (va_arg(ap, int) >= 0 || j == 12)
 			{
 				_putchar('+');
 				*pCount += 1;
@@ -35,20 +35,20 @@ void postive_sign(int flag, char ch, int j, va_list ap, int *pCount)
 */
 void space_sign(int flag, char ch, int j, va_list ap, int *pCount)
 {
-	if (ch == ' ' && (j == 2 || j == 3) && flag == 0)
+	if ((ch == ' ' && (j == 2 || j == 3 || j == 12)) && flag == 0)
 	{
-		if (va_arg(ap, int) >= 0)
+		if (va_arg(ap, int) >= 0 || j == 12)
 		{
 			_putchar(' ');
 			*pCount += 1;
 		}
 	}
-	else if (flag == 1 && (j == 2 || j == 3))
+	else if (flag <= 2 && (j == 2 || j == 3 || j == 12))
 	{
 		_putchar('+');
 		*pCount += 1;
 	}
-	else if (flag == 2 && !(j == 2 || j == 3))
+	else if (flag == 2 && !(j == 2 || j == 3 || j == 12))
 	{
 		window_sign(flag, '#', j, ap, pCount);
 	}
@@ -66,7 +66,7 @@ void window_sign(int flag, char ch, int j, va_list ap, int *pCount)
 {
 	if (va_arg(ap, int) != 0)
 	{
-		if (flag > 1 && !(j == 2 || j == 3))
+		if (flag > 1 && !(j == 2 || j == 3 || j == 12))
 		{
 			if (ch == '#' && j == 7)
 			{
@@ -86,12 +86,10 @@ void window_sign(int flag, char ch, int j, va_list ap, int *pCount)
 				*pCount += 2;
 			}
 		}
-		else if (flag < 2 && (j == 2 || j == 3))
+		else if (flag < 2 && (j == 2 || j == 3 || j == 12))
 		{
 			_putchar('+');
 			*pCount += 1;
-
 		}
 	}
-
 }
