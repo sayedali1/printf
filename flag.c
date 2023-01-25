@@ -43,7 +43,7 @@ void space_sign(int flag, char ch, int j, va_list ap, int *pCount)
 			*pCount += 1;
 		}
 	}
-	else if (flag == 1 && (j == 2 || j == 3))
+	else if (flag <= 2 && (j == 2 || j == 3))
 	{
 		_putchar('+');
 		*pCount += 1;
@@ -90,7 +90,6 @@ void window_sign(int flag, char ch, int j, va_list ap, int *pCount)
 		{
 			_putchar('+');
 			*pCount += 1;
-
 		}
 	}
 
