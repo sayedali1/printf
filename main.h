@@ -24,13 +24,15 @@ typedef struct sp_char
 typedef struct signs
 {
 	char ch;
-	void (*fun)(char, int, va_list, int *);
+	void (*fun)(int, char, int, va_list, int *);
 } sign;
 
 int _strlen(char *s);
 int _printf(const char *format, ...);
 
 int spIndex(char ch, struct sp_char *p);
+
+int signIndex(char ch, struct signs *p);
 
 int _putchar(char sp_ch);
 
@@ -62,11 +64,11 @@ int print_rot13(va_list pa, int *pCount);
 
 int print_addr(va_list pa, int *pCount);
 
-void postive_sign(char ch, int j, va_list ap, int *pCount);
+void postive_sign(int flag, char ch, int j, va_list ap, int *pCount);
 
-void space_sign(char ch, int j, va_list ap, int *pCount);
+void space_sign(int flag, char ch, int j, va_list ap, int *pCount);
 
-void window_sign(char ch, int j, va_list ap, int *pCount);
+void window_sign(int flag, char ch, int j, va_list ap, int *pCount);
 
 
 #endif
