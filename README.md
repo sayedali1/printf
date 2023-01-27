@@ -190,11 +190,18 @@ Output:
 ```
 %
 ```
+#### [flag(+,(space), #)](/flag.c)
+
+//+ :Forces to precede the result with a plus or minus sign (+ or -) even for positive numbers. By default, only negative numbers are preceded with a -ve sign.
+
+(space): If no sign is going to be written, a blank space is inserted before the value
+
+//# : Used with o, x or X specifiers the value is preceded with 0, 0x or 0X respectively for values different than zero. Used with e, E and f, it forces the written output to contain a decimal point even if no digits would follow. By default, if no digits follow, no decimal point is written. Used with g or G the result is the same as with e or E but trailing zeros are not removed.
 
 ## Authors
 
-* Sayed Ali <[sayedAli](https://github.com/sayedali1)>
-* Mohamed Reda <[alexnder394](https://github.com/alexnder394)>
+* [Sayed Ali](https://github.com/sayedali1)
+* [Mohamed Reda](https://github.com/alexnder394)
 
 ## License
 
